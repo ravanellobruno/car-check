@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">car-check</string>
+    <string name="title_activity_main">car-check</string>
+    <string name="package_name">com.carcheck.brunoravanello</string>
+    <string name="custom_url_scheme">com.carcheck.brunoravanello</string>
+</resources>

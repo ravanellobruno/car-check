@@ -1,0 +1,193 @@
+ion-list ion-item {
+  --background: var(--ion-color-light-tint);
+  --background: var(--ion-color-gradient-silver);
+  margin-bottom: 15px;
+}
+
+ion-menu-button {
+  --color: white;
+}
+
+ion-toolbar {
+  --background: var(--ion-color-gradient-blue-gray);
+  --color: white;
+}
+
+ion-input,
+ion-select {
+  width: calc(100% - 40px) !important;
+  margin-left: 20px;
+  border-bottom: 1px solid var(--ion-color-dark-shade);
+  margin-bottom: 15px;
+}
+
+.arrow-back {
+  color: white;
+}
+
+.menu-btn-wrapper {
+  position: absolute;
+  top: 5px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 5px 20px;
+  border: 3px solid var(--ion-color-primary-contrast);
+  background: var(--ion-color-light-tint);
+  min-width: 100px;
+}
+
+th {
+  padding-top: 15px;
+}
+
+td {
+  vertical-align: top;
+}
+
+.btn {
+  height: 37px;
+  --box-shadow: var(--ion-color-box-shadow-button);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 0 20px;
+  padding-left: 15px;
+  --background: var(--ion-color-success-shade);
+  --background-activated: var(--ion-color-success-shade);
+  --background-focused: var(--ion-color-success-shade);
+  --background-hovered: var(--ion-color-success-shade);
+}
+
+.add-btn {
+  position: relative;
+  left: calc(100% - 132px);
+  bottom: 16px;
+  --background: var(--ion-color-primary);
+  --background-activated: var(--ion-color-primary);
+  --background-focused: var(--ion-color-primary);
+  --background-hovered: var(--ion-color-primary);
+}
+
+.delete-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 2;
+  --background: var(--ion-color-danger-shade);
+  --background-activated: var(--ion-color-danger-shade);
+  --background-focused: var(--ion-color-danger-shade);
+  --background-hovered: var(--ion-color-danger-shade);
+}
+
+.v-enter-from {
+  opacity: 0;
+}
+
+.v-enter-to {
+  opacity: 1;
+}
+
+.v-enter-active {
+  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+}
+
+.list-checkbox {
+  width: 50px;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+
+table,
+table * {
+  border-color: transparent;
+  background: transparent;
+}
+
+.red-warn-text {
+  color: red;
+  font-weight: bold;
+}
+
+.orange-warn-text {
+  color: orangered;
+}
+
+.layout-bottom {
+  height: 70px;
+}
+
+.warn-text,
+.item-subtitle {
+  margin-top: 7px;
+  font-size: 13px;
+}
+
+.item-subtitle {
+  margin-bottom: 3px;
+}
+
+.item-title {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.checkboxes-title {
+  margin-left: 16px;
+}
+
+.maintenance-list {
+  width: 100vw;
+  padding-left: 22px;
+  padding-right: 32%;
+}
+
+.maintenance-list ul {
+  margin-top: 5px;
+}
+
+.maintenance-list small {
+  position: relative;
+  right: 19px;
+}
+
+.page-title {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.display-block {
+  display: block;
+}
+
+.check-icon {
+  margin: 0 5px;
+  position: relative;
+  top: 2px;
+  color: green;
+  transform: scale(1.6);
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  -o-transform: scale(1.6);
+}
+
+.verification-text {
+  width: 100%;
+}
