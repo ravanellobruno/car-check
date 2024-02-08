@@ -114,8 +114,8 @@ export default {
       this.maintenance = await this.getMaintenance(this.maintenanceId);
 
       this.items.forEach((item) => {
-        this.maintenance.items.forEach((el) => {
-          if (item.name.trim() === el.trim()) {
+        this.maintenance.items.forEach((maintenanceItem) => {
+          if (item.name.trim() === maintenanceItem.trim()) {
             item.isChecked = true;
           }
         });

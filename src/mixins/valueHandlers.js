@@ -6,8 +6,8 @@ export default {
       return JSON.parse(JSON.stringify(value));
     },
 
-    valueHandlers_getCheckedIds(data) {
-      const checkedElements = data.filter((el) => el.isChecked);
+    valueHandlers_getCheckedIds(elements) {
+      const checkedElements = elements.filter((el) => el.isChecked);
       return checkedElements.map((el) => el.id);
     },
 

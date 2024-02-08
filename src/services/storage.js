@@ -59,8 +59,8 @@ export default {
     await this.setRegisters(registers);
   },
 
-  async updateRegisters(target, data) {
-    for await (const el of data) {
+  async updateRegisters(target, elements) {
+    for await (const el of elements) {
       await this.updateRegister(target, el);
     }
   },
@@ -84,8 +84,8 @@ export default {
   },
 
   async deleteRegisters(target, ids, childs = null) {
-    for await (const el of ids) {
-      await this.deleteRegister(target, el, childs);
+    for await (const id of ids) {
+      await this.deleteRegister(target, id, childs);
     }
   },
 };
