@@ -17,7 +17,9 @@ export default {
   },
 
   filterRegistersByParent(parent) {
-    registers = registers.filter((el) => el[parent.idProp] === parent.id);
+    registers = registers.filter(
+      (register) => register[parent.idProp] === parent.id
+    );
   },
 
   reorderRegisters(orderBy) {
@@ -43,7 +45,7 @@ export default {
 
   async getRegister(target, id) {
     await this.init(target);
-    return registers.filter((el) => el.id === parseInt(id))[0];
+    return registers.filter((register) => register.id === parseInt(id))[0];
   },
 
   async storeRegister(target, data) {
@@ -54,7 +56,7 @@ export default {
 
   async updateRegister(target, data) {
     await this.init(target);
-    const index = registers.findIndex((el) => el.id === data.id);
+    const index = registers.findIndex((register) => register.id === data.id);
     registers[index] = data;
     await this.setRegisters(registers);
   },
@@ -72,14 +74,14 @@ export default {
       await this.init(target);
 
       await this.setRegisters(
-        registers.filter((el) => parseInt(el[parentIdProp]) !== id)
+        registers.filter((register) => parseInt(register[parentIdProp]) !== id)
       );
     }
   },
 
   async deleteRegister(target, id, childs = null) {
     await this.init(target);
-    await this.setRegisters(registers.filter((el) => el.id !== id));
+    await this.setRegisters(registers.filter((register) => register.id !== id));
     childs && (await this.deleteChilds(childs, id));
   },
 

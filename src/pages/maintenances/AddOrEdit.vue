@@ -123,8 +123,12 @@ export default {
     },
 
     getMaintenanceData() {
-      const checkedElements = this.items.filter((el) => el.isChecked);
-      this.maintenance.items = checkedElements.map((el) => el.name);
+      const checkedItems = this.items.filter((item) => item.isChecked);
+
+      this.maintenance.items = checkedItems.map(
+        (checkedItem) => checkedItem.name
+      );
+
       return this.maintenance;
     },
 
@@ -133,12 +137,12 @@ export default {
       const itemsCopy = this.valueHandlers_getCopy(this.items);
 
       if (this.maintenance.isSelectedItemsToUpdate) {
-        itemsCopy.forEach((el) => {
-          if (el.isChecked) {
-            el.date = this.maintenance.date;
-            el.km = this.maintenance.km;
-            delete el.isChecked;
-            itemsToUpdate.push(el);
+        itemsCopy.forEach((item) => {
+          if (item.isChecked) {
+            item.date = this.maintenance.date;
+            item.km = this.maintenance.km;
+            delete item.isChecked;
+            itemsToUpdate.push(item);
           }
         });
       }

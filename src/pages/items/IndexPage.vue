@@ -170,16 +170,16 @@ export default {
     async proceedGetItems() {
       this.items = await this.getItems(this.vehicleId);
 
-      this.items.forEach((el) => {
-        const nextKm = parseInt(el.km) + parseInt(el.nextKmAmount);
-        el.formatedNextKm = this.valueHandlers_formatKm(nextKm);
+      this.items.forEach((item) => {
+        const nextKm = parseInt(item.km) + parseInt(item.nextKmAmount);
+        item.formatedNextKm = this.valueHandlers_formatKm(nextKm);
 
-        el.formatedNextDate = this.valueHandlers_formatDate(
-          this.getNextDate(el.date, el.monthsNextDate)
+        item.formatedNextDate = this.valueHandlers_formatDate(
+          this.getNextDate(item.date, item.monthsNextDate)
         );
 
-        el.dateWarn = this.getDateWarn(el.date, el.monthsNextDate);
-        el.kmWarn = this.getKmWarn(nextKm, this.vehicle.km);
+        item.dateWarn = this.getDateWarn(item.date, item.monthsNextDate);
+        item.kmWarn = this.getKmWarn(nextKm, this.vehicle.km);
       });
     },
 
