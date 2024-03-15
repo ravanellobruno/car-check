@@ -61,9 +61,9 @@ export default {
     await this.setRegisters(registers);
   },
 
-  async updateRegisters(target, elements) {
-    for await (const el of elements) {
-      await this.updateRegister(target, el);
+  async updateRegisters(target, registers) {
+    for await (const register of registers) {
+      await this.updateRegister(target, register);
     }
   },
 

@@ -110,8 +110,8 @@ export default {
     ]),
     ...mapActions('vehicle', ['getVehicle']),
 
-    getNextDate(value, months) {
-      return moment(value).add(months, 'months');
+    getNextDate(date, months) {
+      return moment(date).add(months, 'months');
     },
 
     getDateWarn(date, months) {

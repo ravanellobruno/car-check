@@ -6,23 +6,26 @@ export default {
       return JSON.parse(JSON.stringify(value));
     },
 
-    valueHandlers_getCheckedIds(elements) {
-      const checkedElements = elements.filter((el) => el.isChecked);
-      return checkedElements.map((el) => el.id);
+    valueHandlers_getCheckedIds(registers) {
+      const checkedRegisters = registers.filter(
+        (register) => register.isChecked
+      );
+
+      return checkedRegisters.map((register) => register.id);
     },
 
-    valueHandlers_formatKm(value) {
-      if (!value) {
-        return value;
+    valueHandlers_formatKm(km) {
+      if (!km) {
+        return km;
       }
 
-      value = `${value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} km`;
+      km = `${km.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} km`;
 
-      return value.replace('-', '');
+      return km.replace('-', '');
     },
 
-    valueHandlers_formatDate(value) {
-      return moment(value).format('DD/MM/YYYY');
+    valueHandlers_formatDate(date) {
+      return moment(date).format('DD/MM/YYYY');
     },
   },
 };
