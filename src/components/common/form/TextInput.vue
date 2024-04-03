@@ -19,7 +19,7 @@ export default {
   },
   props: {
     value: {
-      type: Date,
+      type: String,
     },
     label: {
       type: String,

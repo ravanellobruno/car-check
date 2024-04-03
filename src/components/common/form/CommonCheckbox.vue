@@ -14,10 +14,5 @@ export default {
   components: {
     IonCheckbox,
   },
-  props: {
-    value: {
-      type: Date,
-    },
-  },
 };
 </script>
